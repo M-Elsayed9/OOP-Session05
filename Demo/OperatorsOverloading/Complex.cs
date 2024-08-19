@@ -34,7 +34,29 @@ namespace Demo.OperatorsOverloading
                 Real = (c1?.Real ?? 0) - (c2?.Real ?? 0),
                 Imag = (c1?.Imag ?? 0) - (c2?.Imag ?? 0)
             };
-        } 
+        }
+        #endregion
+
+        #region Operator Overloading - Unary Operator
+
+        public static Complex operator ++ (Complex C)
+        {
+            return new Complex()
+            {
+                Real = (C?.Real ?? 0) + 1,
+                Imag = C?.Imag ?? 0
+            };
+        }
+
+        public static Complex operator --(Complex C)
+        {
+            return new Complex()
+            {
+                Real = (C?.Real ?? 0) - 1,
+                Imag = C?.Imag ?? 0
+            };
+        }
+
         #endregion
     }
 }
