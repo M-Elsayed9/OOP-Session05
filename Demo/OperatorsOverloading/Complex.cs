@@ -58,5 +58,26 @@ namespace Demo.OperatorsOverloading
         }
 
         #endregion
+
+        #region Operators Overloading - Relational Operators
+
+        public static bool operator >(Complex c1, Complex c2)
+        {
+            if(c1.Real == c2.Real)
+                return c1.Imag > c2.Imag;
+            else 
+                return c1.Real > c2.Real;
+        }
+
+        public static bool operator <(Complex c1, Complex c2)
+        {
+            if(c1.Real == c2.Real)
+                return c1.Imag < c2.Imag;
+            else 
+                return c1.Real < c2.Real;
+        }
+
+        // must do both of them 
+        #endregion
     }
 }

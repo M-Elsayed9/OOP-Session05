@@ -7,7 +7,7 @@ namespace Demo
     {
         static void Main(string[] args)
         {
-            #region Operator Overloading - Binary Operators
+            #region Operator Overloading 
             Complex c1 = new Complex() { Real = 10, Imag = 6 };
             Console.WriteLine(c1);
 
@@ -16,6 +16,7 @@ namespace Demo
 
             Complex c3 = default; // Null 
 
+            #region Binary Operators
             //c3 = c1 + c2; 
 
             //Console.WriteLine(c3);
@@ -23,13 +24,29 @@ namespace Demo
             //c3 = c1 - c2;
 
             //c3 += c1;
-            //c3 -= c2;
+            //c3 -= c2; 
+            #endregion
 
+            #region Unary Operators
             //c3 = ++c1; //prefix
             //c3 = c1++; //postfix
 
             //c3 = --c1; //prefix
-            //c3 = c1--; //postfix
+            //c3 = c1--; //postfix 
+            #endregion
+
+            #region Relational Operators < > >= <= = !=
+            //if (c1 > c2)
+            //    Console.WriteLine("C1 > C2");
+            //else if (c2 > c1)
+            //    Console.WriteLine("c2 > c1");
+
+            //if (c1 == c2)
+            //    Console.WriteLine("C1 > C2");
+            //else if (c2 != c1)
+            //    Console.WriteLine("c2 > c1");
+
+            #endregion
             Console.WriteLine(c3);
 
             #endregion
