@@ -79,5 +79,18 @@ namespace Demo.OperatorsOverloading
 
         // must do both of them 
         #endregion
+
+        #region Operators Overloading - Casting Operators 
+
+        public static explicit operator int (Complex c)
+        {
+            return c?.Real ?? 0;
+        }
+
+        public static implicit operator string? (Complex c)
+        {
+            return c?.ToString() ?? string.Empty;
+        }
+        #endregion
     }
 }
