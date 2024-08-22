@@ -1,6 +1,8 @@
 ﻿
+using Demo.Abstraction;
 using Demo.Casting_Operator_Overloading;
 using Demo.OperatorsOverloading;
+using System.Net.Http.Headers;
 
 namespace Demo
 {
@@ -80,26 +82,59 @@ namespace Demo
             // Database -> Model {User} => ViewModel {UserViewModel} -> View
             // View -> ViewModel {UserViewModel} => Model {User} -> Database
 
-            User user = new User()
-            {
-                Id = 10,
-                FullName = "Aliaa Tarek",
-                Email = "AliaaTarek42@gamil.com",
-                Password = "Password",
-                SecurityStamp = Guid.NewGuid()
-            };
-            
-            //Console.WriteLine(user.SecurityStamp);
+            //User user = new User()
+            //{
+            //    Id = 10,
+            //    FullName = "Aliaa Tarek",
+            //    Email = "AliaaTarek42@gamil.com",
+            //    Password = "Password",
+            //    SecurityStamp = Guid.NewGuid()
+            //};
 
-            UserVIewModel userViewModel = (UserVIewModel) user; // Explicit casting
-            // mappping
+            ////Console.WriteLine(user.SecurityStamp);
 
-            Console.WriteLine(userViewModel.FirstName);
-            Console.WriteLine(userViewModel.LastName);
-            Console.WriteLine(userViewModel.Email);
+            //UserVIewModel userViewModel = (UserVIewModel) user; // Explicit casting
+            //// mappping
 
-            object obj = new UserVIewModel();
-            userViewModel = (UserVIewModel)(obj);
+            //Console.WriteLine(userViewModel.FirstName);
+            //Console.WriteLine(userViewModel.LastName);
+            //Console.WriteLine(userViewModel.Email);
+
+            //object obj = new UserVIewModel();
+            //userViewModel = (UserVIewModel)(obj);
+            #endregion
+
+            #region Abstraction
+            //Shape shape = new Shape(); // invalid,
+            //cannot create an object from abstract class
+
+            //Rectangle rectangle = new Rectangle()
+            //{
+            //    Dim01 = 10,
+            //    Dim02 = 5
+            //};
+
+            //decimal area = rectangle.Area();
+            //Console.WriteLine(area);
+            //decimal recPerimeter = rectangle.Perimter;
+            //Console.WriteLine(recPerimeter);
+
+            //Square square = new Square(10);
+
+            //decimal squareArea = square.Area();
+            //Console.WriteLine(squareArea);
+            //Console.WriteLine(square.Perimter);
+
+            Circle circle = new Circle(5);
+
+            decimal Area = circle.Area();
+            Console.WriteLine(Area);
+            decimal Perimeter = circle.Perimter;
+            Console.WriteLine(Perimeter);
+
+            Shape shape = new Circle(5);
+            // can refer to an object of a derived class
+            // using a reference of the base class
             #endregion
         }
     }
