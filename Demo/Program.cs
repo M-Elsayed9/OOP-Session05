@@ -2,6 +2,7 @@
 using Demo.Abstraction;
 using Demo.Casting_Operator_Overloading;
 using Demo.OperatorsOverloading;
+using Demo.Partial;
 using Demo.Static;
 using System.Net.Http.Headers;
 
@@ -166,6 +167,20 @@ namespace Demo
             #endregion
 
             #region Sealed (Class, Method, Property)
+
+            #endregion
+
+            #region Partial [Class, Struct, Interface, Method]
+            Employee employee = new Employee()
+            {
+                Id = 10,
+                Name = "Aliaa Tarek",
+                Salary = 10000,
+                Age = 25
+            };
+
+            employee.Display();
+
 
             #endregion
         }
