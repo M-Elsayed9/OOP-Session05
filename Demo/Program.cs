@@ -164,6 +164,10 @@ namespace Demo
             //Console.WriteLine(Utility.Pi); // static Constructor is called before the property is called
 
             #endregion
+
+            #region Sealed (Class, Method, Property)
+
+            #endregion
         }
     }
 }
