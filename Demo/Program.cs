@@ -2,6 +2,7 @@
 using Demo.Abstraction;
 using Demo.Casting_Operator_Overloading;
 using Demo.OperatorsOverloading;
+using Demo.Static;
 using System.Net.Http.Headers;
 
 namespace Demo
@@ -125,16 +126,43 @@ namespace Demo
             //Console.WriteLine(squareArea);
             //Console.WriteLine(square.Perimter);
 
-            Circle circle = new Circle(5);
+            //Circle circle = new Circle(5);
 
-            decimal Area = circle.Area();
-            Console.WriteLine(Area);
-            decimal Perimeter = circle.Perimter;
-            Console.WriteLine(Perimeter);
+            //decimal Area = circle.Area();
+            //Console.WriteLine(Area);
+            //decimal Perimeter = circle.Perimter;
+            //Console.WriteLine(Perimeter);
 
-            Shape shape = new Circle(5);
+            //Shape shape = new Circle(5);
             // can refer to an object of a derived class
             // using a reference of the base class
+            #endregion
+
+            #region Static [Class, Method, Constructor, Property, Attribute] and Constant
+            //Utility utility = new Utility(10, 5);
+            //utility.X = 10;
+            //utility.Y = 5;
+
+            //Console.WriteLine(utility.ToString());
+
+            //Console.WriteLine(utility.CmToInch(254));
+
+            //Utility utility2 = new Utility(100, 500);
+            //Console.WriteLine(utility2.CmToInch(254));
+            // The result of callling method CmToInch will not differ
+            // by the difference of the object state [Data(x, y)]
+
+            //Console.WriteLine(Utility.CmToInch(254));
+
+            //Console.WriteLine(utility2.CalcCircleArea(5));
+
+            //Console.WriteLine(Utility.CalcCircleArea(5));
+            // static constructor is called before the method is called
+
+            //Utility.Pi = 3.14159; // static constructor is called before intilization
+
+            //Console.WriteLine(Utility.Pi); // static Constructor is called before the property is called
+
             #endregion
         }
     }
