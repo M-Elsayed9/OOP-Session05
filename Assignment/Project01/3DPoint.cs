@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OOP05.Project1
+namespace Assignment.Project01
 {
     public class _3DPoint : IComparable, ICloneable
     {
         #region Properties
-        public int X { get; set; }
+        public int? X { get; set; }  
         public int Y { get; set; }
         public int Z { get; set; }
         #endregion
