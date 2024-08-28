@@ -9,7 +9,7 @@ namespace Assignment.Project01
     public class _3DPoint : IComparable, ICloneable
     {
         #region Properties
-        public int? X { get; set; }  
+        public int X { get; set; }  
         public int Y { get; set; }
         public int Z { get; set; }
         #endregion
@@ -53,23 +53,20 @@ namespace Assignment.Project01
 
         public int CompareTo(object? obj)
         {
-            _3DPoint other = (_3DPoint)obj; // Unsafe
+            if (obj is null)
+            {
+                return 1;
+            }
 
-            if (this.X > other.X)
+            _3DPoint other = (_3DPoint)obj;
+
+            if (this.X != other.X)
             {
-                return 1;
+                return this.X.CompareTo(other.X);
             }
-            else if (this.X < other.X)
+            else if (this.Y != other.Y)
             {
-                return -1;
-            }
-            else if (this.Y > other.Y)
-            {
-                return 1;
-            }
-            else if (this.Y < other.Y)
-            {
-                return -1;
+                return this.Y.CompareTo(other.Y);
             }
             else
             {
@@ -92,7 +89,7 @@ namespace Assignment.Project01
         {
             return !(a == b);
         }
-        #endregion
 
+        #endregion
     }
 }
